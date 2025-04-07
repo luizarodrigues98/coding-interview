@@ -9,6 +9,6 @@
 <h2>Users</h2>
 <% @company.users.each do |user| %>
   <ul>
-    <li><%= user.display_name %></li>
+    <li><%= user.display_name %> <%= link_to 'Send Welcome Email', send_welcome_email_path(id: user.id) %></li>
   </ul>
 <% end %>

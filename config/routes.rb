@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :tweets, only: [:index]
   end
 
+  get 'send_welcome_email', to: 'users#send_welcome_email'
 end
